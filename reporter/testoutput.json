@@ -1,0 +1,3524 @@
+{
+    "start": 1550508462517.0,
+    "test-id": "1a641f47-65db-4ed9-8664-6a0eeb4bf0b8",
+    "duration": 60,
+    "test-name": "test-cell",
+    "topology": {
+        "testd4": {
+            "name": "jumpnet-client",
+            "instance-type": "t2.micro"
+        },
+        "testd3": {
+            "name": "jumpnet-gateway",
+            "instance-type": "t2.micro"
+        }
+    },
+    "events": [
+        {
+            "payload": {
+                "counter": "1",
+                "gw": "WifiFirst",
+                "client": "WifiFirst",
+                "policy": "Continuity Only",
+                "version": 1
+            },
+            "ts": 1550508462517.0,
+            "source": "testd3",
+            "op": "Policy.Set",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508462567
+                },
+                "session": {
+                    "now": 5339097.040359,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339096.991365,
+                        "sum": 110,
+                        "dev": 110.27,
+                        "slope": 110,
+                        "mean": 110
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 102,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339096.990734,
+                        "sum": 102,
+                        "dev": 102.253,
+                        "slope": 102,
+                        "mean": 102
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 346
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 4500,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339097.031575,
+                                "sum": 229.899,
+                                "dev": 78.8632,
+                                "slope": 51.3874,
+                                "mean": 229.899
+                            },
+                            "delivered": {
+                                "lastUpd": 5339097.031576,
+                                "sum": 140.718,
+                                "dev": 69.7801,
+                                "slope": 30.4955,
+                                "mean": 140.718
+                            },
+                            "sent": {
+                                "lastUpd": 5339097.031574,
+                                "sum": 105.663,
+                                "dev": 73.9181,
+                                "slope": 5.19467,
+                                "mean": 105.663
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 4,
+                        "rtt": {
+                            "lastUpd": 5339096.991345,
+                            "sum": 620,
+                            "dev": 621.524,
+                            "slope": 620,
+                            "mean": 620
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 118
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508462567.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "upload": {
+                    "jitter": {
+                        "units": "msec",
+                        "value": 5
+                    },
+                    "loss": {
+                        "units": "%",
+                        "value": 15
+                    },
+                    "throughput": {
+                        "units": "Mbit/s",
+                        "value": 10
+                    },
+                    "delay": {
+                        "units": "msec",
+                        "value": 5
+                    }
+                },
+                "subflow": "Cell",
+                "download": {
+                    "jitter": {
+                        "units": "msec",
+                        "value": 5
+                    },
+                    "loss": {
+                        "units": "%",
+                        "value": 15
+                    },
+                    "throughput": {
+                        "units": "Mbit/s",
+                        "value": 10
+                    },
+                    "delay": {
+                        "units": "msec",
+                        "value": 5
+                    }
+                },
+                "counter": "1"
+            },
+            "ts": 1550508472534.0,
+            "source": "testd3",
+            "op": "Subflow.TCSet",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508477568
+                },
+                "session": {
+                    "now": 5339112.041254,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339112.013408,
+                        "sum": 28,
+                        "dev": 28.039,
+                        "slope": 28,
+                        "mean": 28
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 102,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339096.990734,
+                        "sum": null,
+                        "dev": null,
+                        "slope": null,
+                        "mean": null
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 406
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 6000,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339112.013398,
+                                "sum": 12,
+                                "dev": 12.0168,
+                                "slope": 12,
+                                "mean": 12
+                            },
+                            "delivered": {
+                                "lastUpd": 5339112.013399,
+                                "sum": 12,
+                                "dev": 12.0168,
+                                "slope": 12,
+                                "mean": 12
+                            },
+                            "sent": {
+                                "lastUpd": 5339112.013397,
+                                "sum": null,
+                                "dev": null,
+                                "slope": null,
+                                "mean": null
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 5,
+                        "rtt": {
+                            "lastUpd": 5339096.991345,
+                            "sum": null,
+                            "dev": null,
+                            "slope": null,
+                            "mean": null
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 118
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508477568.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508482569
+                },
+                "session": {
+                    "now": 5339117.041745,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339117.012353,
+                        "sum": 28.1889,
+                        "dev": 2.30287,
+                        "slope": 0.373936,
+                        "mean": 28
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 102,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339096.990734,
+                        "sum": null,
+                        "dev": null,
+                        "slope": null,
+                        "mean": null
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 466
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 7500,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339117.012342,
+                                "sum": 12.4182,
+                                "dev": 46.6031,
+                                "slope": -45.7071,
+                                "mean": 12.4182
+                            },
+                            "delivered": {
+                                "lastUpd": 5339117.012343,
+                                "sum": 20.1653,
+                                "dev": 3.36694,
+                                "slope": -3.03665,
+                                "mean": 20.1653
+                            },
+                            "sent": {
+                                "lastUpd": 5339117.012341,
+                                "sum": 0.056208,
+                                "dev": 7.8774,
+                                "slope": -7.72869,
+                                "mean": 0.056208
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 6,
+                        "rtt": {
+                            "lastUpd": 5339112.054205,
+                            "sum": null,
+                            "dev": null,
+                            "slope": null,
+                            "mean": null
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 126
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508482569.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "self": {
+                    "swapped_virtual_memory": {
+                        "units": "B",
+                        "value": 0
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 9.381431733694775e-08
+                    },
+                    "resident_set_size": {
+                        "units": "B",
+                        "value": 10915840
+                    },
+                    "virtual_memory": {
+                        "units": "B",
+                        "value": 48545792
+                    }
+                },
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508477540
+                },
+                "system": {
+                    "disk": {
+                        "available": {
+                            "units": "B",
+                            "value": 6360408064
+                        },
+                        "capacity": {
+                            "units": "B",
+                            "value": 8259014656
+                        },
+                        "free": {
+                            "units": "B",
+                            "value": 6377185280
+                        }
+                    },
+                    "swap": {
+                        "free": {
+                            "units": "B",
+                            "value": 0
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 0
+                        }
+                    },
+                    "ram": {
+                        "free": {
+                            "units": "B",
+                            "value": 3567263744
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 4142174208
+                        }
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 0.3434347023925597
+                    }
+                },
+                "interval": {
+                    "units": "msec",
+                    "value": 20344
+                }
+            },
+            "source": "testd3",
+            "op": "Device.HostStatus",
+            "ts": 1550508487257.0
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508487569
+                },
+                "session": {
+                    "now": 5339122.042065,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339122.012655,
+                        "sum": 28.1899,
+                        "dev": 0.189002,
+                        "slope": 0.00352093,
+                        "mean": 28
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 102,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339096.990734,
+                        "sum": null,
+                        "dev": null,
+                        "slope": null,
+                        "mean": null
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 526
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 9000,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339122.012645,
+                                "sum": 12.4208,
+                                "dev": 47.1218,
+                                "slope": -46.4668,
+                                "mean": 12.4208
+                            },
+                            "delivered": {
+                                "lastUpd": 5339122.012646,
+                                "sum": 20.2201,
+                                "dev": 10.8573,
+                                "slope": -10.7706,
+                                "mean": 20.2201
+                            },
+                            "sent": {
+                                "lastUpd": 5339122.012644,
+                                "sum": 0.0565661,
+                                "dev": 7.95527,
+                                "slope": -7.83216,
+                                "mean": 0.0565661
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 7,
+                        "rtt": {
+                            "lastUpd": 5339117.054144,
+                            "sum": null,
+                            "dev": null,
+                            "slope": null,
+                            "mean": null
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 134
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508487569.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508492520
+                },
+                "session": {
+                    "now": 5339144.071412,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 17857900.0,
+                        "lastUpd": 5339144.071262,
+                        "dev": 5.50181,
+                        "slope": 0.23378,
+                        "mean": 1379.98
+                    },
+                    "byteOut": 1342424,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 337227,
+                        "lastUpd": 5339144.071225,
+                        "dev": 0.196081,
+                        "slope": -0.00269655,
+                        "mean": 52.0005
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 339401,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18037900.0,
+                                "lastUpd": 5339144.07126,
+                                "dev": 4324.99,
+                                "slope": 53.0391,
+                                "mean": 18037900.0
+                            },
+                            "delivered": {
+                                "sum": 515635,
+                                "lastUpd": 5339144.07126,
+                                "dev": 29.6808,
+                                "slope": 2.4622,
+                                "mean": 515635
+                            },
+                            "sent": {
+                                "sum": 364181,
+                                "lastUpd": 5339144.071259,
+                                "dev": 89.559,
+                                "slope": 0.650885,
+                                "mean": 364181
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 70886466
+                        },
+                        "seq": 50693,
+                        "rtt": {
+                            "sum": null,
+                            "lastUpd": 5339141.921805,
+                            "dev": null,
+                            "slope": null,
+                            "mean": null
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 1445696
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508492520.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508492570
+                },
+                "session": {
+                    "now": 5339127.042418,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339127.04185,
+                        "sum": 337068,
+                        "dev": 0.349556,
+                        "slope": -0.00611409,
+                        "mean": 51.9969
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 72810770,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339127.041896,
+                        "sum": 18214000.0,
+                        "dev": 5.32332,
+                        "slope": 0.218026,
+                        "mean": 1379.98
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 2079812
+                        },
+                        "choked": 1,
+                        "p": "0xb87e30",
+                        "cwd": 354107,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339127.041847,
+                                "sum": 520468,
+                                "dev": 28.0077,
+                                "slope": -0.303059,
+                                "mean": 520468
+                            },
+                            "delivered": {
+                                "lastUpd": 5339127.041848,
+                                "sum": 18095300.0,
+                                "dev": 316.377,
+                                "slope": -0.224913,
+                                "mean": 18095300.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339127.041847,
+                                "sum": 18280100.0,
+                                "dev": 3986.54,
+                                "slope": -13.0612,
+                                "mean": 18280100.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 26135,
+                        "rtt": {
+                            "lastUpd": 5339124.850194,
+                            "sum": null,
+                            "dev": null,
+                            "slope": null,
+                            "mean": null
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 73021890
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508492570.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "self": {
+                    "swapped_virtual_memory": {
+                        "units": "B",
+                        "value": 0
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 0.3367244590915604
+                    },
+                    "resident_set_size": {
+                        "units": "B",
+                        "value": 10915840
+                    },
+                    "virtual_memory": {
+                        "units": "B",
+                        "value": 48545792
+                    }
+                },
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508482541
+                },
+                "system": {
+                    "disk": {
+                        "available": {
+                            "units": "B",
+                            "value": 6360391680
+                        },
+                        "capacity": {
+                            "units": "B",
+                            "value": 8259014656
+                        },
+                        "free": {
+                            "units": "B",
+                            "value": 6377168896
+                        }
+                    },
+                    "swap": {
+                        "free": {
+                            "units": "B",
+                            "value": 0
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 0
+                        }
+                    },
+                    "ram": {
+                        "free": {
+                            "units": "B",
+                            "value": 3567136768
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 4142174208
+                        }
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 1.3468978363662416
+                    }
+                },
+                "interval": {
+                    "units": "msec",
+                    "value": 5000
+                }
+            },
+            "source": "testd3",
+            "op": "Device.HostStatus",
+            "ts": 1550508495268.0
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508497522
+                },
+                "session": {
+                    "now": 5339149.073037,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18187900.0,
+                        "lastUpd": 5339149.072917,
+                        "dev": 3.03654,
+                        "slope": -0.00131692,
+                        "mean": 1379.97
+                    },
+                    "byteOut": 3181104,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 343549,
+                        "lastUpd": 5339149.072881,
+                        "dev": 2.68124,
+                        "slope": -0.662571,
+                        "mean": 52.2597
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 496625,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18377500.0,
+                                "lastUpd": 5339149.072915,
+                                "dev": 3035.01,
+                                "slope": -27.0225,
+                                "mean": 18377500.0
+                            },
+                            "delivered": {
+                                "sum": 524709,
+                                "lastUpd": 5339149.072915,
+                                "dev": 30.6553,
+                                "slope": -1.65769,
+                                "mean": 524709
+                            },
+                            "sent": {
+                                "sum": 371763,
+                                "lastUpd": 5339149.072914,
+                                "dev": 80.4674,
+                                "slope": -1.42235,
+                                "mean": 371763
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 163173274
+                        },
+                        "seq": 51168,
+                        "rtt": {
+                            "sum": 1066270.0,
+                            "lastUpd": 5339148.929189,
+                            "dev": 15614.4,
+                            "slope": 11204,
+                            "mean": 146659
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 3420800
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508497522.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508497570
+                },
+                "session": {
+                    "now": 5339132.043193,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339132.041063,
+                        "sum": 343644,
+                        "dev": 2.63578,
+                        "slope": -0.646955,
+                        "mean": 52.2441
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 164680006,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339132.04315,
+                        "sum": 18263400.0,
+                        "dev": 2.82489,
+                        "slope": 0.000417837,
+                        "mean": 1379.98
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 4846812
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 517701,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339132.04106,
+                                "sum": 530846,
+                                "dev": 28.1904,
+                                "slope": -0.673314,
+                                "mean": 530846
+                            },
+                            "delivered": {
+                                "lastUpd": 5339132.041061,
+                                "sum": 18429600.0,
+                                "dev": 276.658,
+                                "slope": -0.216443,
+                                "mean": 18429600.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339132.041059,
+                                "sum": 18263600.0,
+                                "dev": 2800.79,
+                                "slope": -14.2127,
+                                "mean": 18263600.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 60230,
+                        "rtt": {
+                            "lastUpd": 5339132.011565,
+                            "sum": 1065690.0,
+                            "dev": 16496.3,
+                            "slope": 12341.9,
+                            "mean": 148271
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 165157426
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508497570.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508502523
+                },
+                "session": {
+                    "now": 5339154.074714,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18533600.0,
+                        "lastUpd": 5339154.074597,
+                        "dev": 2.85659,
+                        "slope": 0.0152502,
+                        "mean": 1379.99
+                    },
+                    "byteOut": 5194960,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 366603,
+                        "lastUpd": 5339154.07463,
+                        "dev": 6.25529,
+                        "slope": -2.31796,
+                        "mean": 53.4824
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 617200,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18739400.0,
+                                "lastUpd": 5339154.074595,
+                                "dev": 2793.78,
+                                "slope": -47.8811,
+                                "mean": 18739400.0
+                            },
+                            "delivered": {
+                                "sum": 561017,
+                                "lastUpd": 5339154.074595,
+                                "dev": 32.3515,
+                                "slope": -4.81303,
+                                "mean": 561017
+                            },
+                            "sent": {
+                                "sum": 396594,
+                                "lastUpd": 5339154.074594,
+                                "dev": 98.2796,
+                                "slope": -3.89167,
+                                "mean": 396594
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 255670022
+                        },
+                        "seq": 51824,
+                        "rtt": {
+                            "sum": 1032060.0,
+                            "lastUpd": 5339154.030824,
+                            "dev": 13941.8,
+                            "slope": -6694.07,
+                            "mean": 63838.5
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 5577840
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508502523.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508502572
+                },
+                "session": {
+                    "now": 5339137.044609,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339137.044473,
+                        "sum": 364258,
+                        "dev": 6.14344,
+                        "slope": -2.2872,
+                        "mean": 53.4198
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 254323062,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339137.044518,
+                        "sum": 18400400.0,
+                        "dev": 2.76577,
+                        "slope": 0.0153593,
+                        "mean": 1379.99
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 7797188
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 638419,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339137.044546,
+                                "sum": 555045,
+                                "dev": 29.0468,
+                                "slope": -2.54155,
+                                "mean": 555045
+                            },
+                            "delivered": {
+                                "lastUpd": 5339137.044546,
+                                "sum": 18707600.0,
+                                "dev": 208.556,
+                                "slope": 1.52454,
+                                "mean": 18707600.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339137.044545,
+                                "sum": 18471900.0,
+                                "dev": 2554.3,
+                                "slope": 12.9988,
+                                "mean": 18471900.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 30467,
+                        "rtt": {
+                            "lastUpd": 5339137.009944,
+                            "sum": 1030720.0,
+                            "dev": 13988.2,
+                            "slope": -5975.36,
+                            "mean": 63556.2
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 255060330
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508502572.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "self": {
+                    "swapped_virtual_memory": {
+                        "units": "B",
+                        "value": 0
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 0.3334989001632016
+                    },
+                    "resident_set_size": {
+                        "units": "B",
+                        "value": 11206656
+                    },
+                    "virtual_memory": {
+                        "units": "B",
+                        "value": 48951296
+                    }
+                },
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508487541
+                },
+                "system": {
+                    "disk": {
+                        "available": {
+                            "units": "B",
+                            "value": 6360371200
+                        },
+                        "capacity": {
+                            "units": "B",
+                            "value": 8259014656
+                        },
+                        "free": {
+                            "units": "B",
+                            "value": 6377148416
+                        }
+                    },
+                    "swap": {
+                        "free": {
+                            "units": "B",
+                            "value": 0
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 0
+                        }
+                    },
+                    "ram": {
+                        "free": {
+                            "units": "B",
+                            "value": 3567153152
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 4142174208
+                        }
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 1.3410913219328744
+                    }
+                },
+                "interval": {
+                    "units": "msec",
+                    "value": 344
+                }
+            },
+            "source": "testd3",
+            "op": "Device.HostStatus",
+            "ts": 1550508503277.0
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508507527
+                },
+                "session": {
+                    "now": 5339159.078306,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18612300.0,
+                        "lastUpd": 5339159.078207,
+                        "dev": 0.243673,
+                        "slope": 0.00112562,
+                        "mean": 1380
+                    },
+                    "byteOut": 6898404,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 348402,
+                        "lastUpd": 5339159.078178,
+                        "dev": 0.542358,
+                        "slope": -0.0684305,
+                        "mean": 52.0105
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 715354,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18816600.0,
+                                "lastUpd": 5339159.078204,
+                                "dev": 1784.25,
+                                "slope": 39.2964,
+                                "mean": 18816600.0
+                            },
+                            "delivered": {
+                                "sum": 537099,
+                                "lastUpd": 5339159.078205,
+                                "dev": 29.1629,
+                                "slope": 0.930166,
+                                "mean": 537099
+                            },
+                            "sent": {
+                                "sum": 377315,
+                                "lastUpd": 5339159.078203,
+                                "dev": 44.5029,
+                                "slope": 0.722126,
+                                "mean": 377315
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 347424222
+                        },
+                        "seq": 51982,
+                        "rtt": {
+                            "sum": 1031830.0,
+                            "lastUpd": 5339159.040407,
+                            "dev": 4663.01,
+                            "slope": 156.513,
+                            "mean": 65251.5
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 7412324
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508507527.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508507572
+                },
+                "session": {
+                    "now": 5339142.045277,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339142.045151,
+                        "sum": 349355,
+                        "dev": 0.604222,
+                        "slope": -0.069302,
+                        "mean": 52.0066
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 345133962,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339142.045216,
+                        "sum": 18726000.0,
+                        "dev": 0.360904,
+                        "slope": 0.00136415,
+                        "mean": 1380
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 10420520
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 739186,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339142.045148,
+                                "sum": 541332,
+                                "dev": 28.0077,
+                                "slope": -0.0773452,
+                                "mean": 541332
+                            },
+                            "delivered": {
+                                "lastUpd": 5339142.045149,
+                                "sum": 18903500.0,
+                                "dev": 235.573,
+                                "slope": -1.10017,
+                                "mean": 18903500.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339142.045147,
+                                "sum": 18801700.0,
+                                "dev": 1711.25,
+                                "slope": 1.59871,
+                                "mean": 18801700.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 63243,
+                        "rtt": {
+                            "lastUpd": 5339142.012707,
+                            "sum": 1010920.0,
+                            "dev": 6076.32,
+                            "slope": 550.799,
+                            "mean": 64743.2
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 346134458
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508507572.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508512528
+                },
+                "session": {
+                    "now": 5339164.079888,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18672100.0,
+                        "lastUpd": 5339164.079779,
+                        "dev": 0.0358651,
+                        "slope": -0.00060154,
+                        "mean": 1380
+                    },
+                    "byteOut": 8653380,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 348945,
+                        "lastUpd": 5339164.079748,
+                        "dev": 0.0515416,
+                        "slope": -0.0007887,
+                        "mean": 52
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 794353,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18877900.0,
+                                "lastUpd": 5339164.079776,
+                                "dev": 1004.89,
+                                "slope": 16.6733,
+                                "mean": 18877900.0
+                            },
+                            "delivered": {
+                                "sum": 537737,
+                                "lastUpd": 5339164.079777,
+                                "dev": 28.5754,
+                                "slope": 0.345805,
+                                "mean": 537737
+                            },
+                            "sent": {
+                                "sum": 378231,
+                                "lastUpd": 5339164.079776,
+                                "dev": 33.4955,
+                                "slope": 0.316867,
+                                "mean": 378231
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 441933210
+                        },
+                        "seq": 54128,
+                        "rtt": {
+                            "sum": 668079,
+                            "lastUpd": 5339164.05599,
+                            "dev": 14435.8,
+                            "slope": -1527.43,
+                            "mean": 65028.8
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 9302304
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508512528.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508512573
+                },
+                "session": {
+                    "now": 5339147.046235,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339147.04607,
+                        "sum": 347393,
+                        "dev": 0.295251,
+                        "slope": -0.00430538,
+                        "mean": 51.9965
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 438405402,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339147.046118,
+                        "sum": 18720400.0,
+                        "dev": 0.197885,
+                        "slope": -0.00112097,
+                        "mean": 1380
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 13115216
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 810953,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339147.045986,
+                                "sum": 538387,
+                                "dev": 28.0076,
+                                "slope": -0.0271965,
+                                "mean": 538387
+                            },
+                            "delivered": {
+                                "lastUpd": 5339147.046067,
+                                "sum": 18855100.0,
+                                "dev": 151.363,
+                                "slope": 1.85847,
+                                "mean": 18855100.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339147.045985,
+                                "sum": 18802100.0,
+                                "dev": 1748.63,
+                                "slope": 5.141,
+                                "mean": 18802100.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 31374,
+                        "rtt": {
+                            "lastUpd": 5339146.971567,
+                            "sum": 788951,
+                            "dev": 8013.85,
+                            "slope": 1466.41,
+                            "mean": 65290.3
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 439676258
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508512573.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508517532
+                },
+                "session": {
+                    "now": 5339169.083561,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18120100.0,
+                        "lastUpd": 5339169.083456,
+                        "dev": 0.0350133,
+                        "slope": -0.00119952,
+                        "mean": 1380
+                    },
+                    "byteOut": 10362128,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 338853,
+                        "lastUpd": 5339169.083361,
+                        "dev": 0.0254233,
+                        "slope": 1.86119e-05,
+                        "mean": 52
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 859731,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18309800.0,
+                                "lastUpd": 5339169.083453,
+                                "dev": 1665.69,
+                                "slope": -62.5187,
+                                "mean": 18309800.0
+                            },
+                            "delivered": {
+                                "sum": 519570,
+                                "lastUpd": 5339169.083454,
+                                "dev": 29.504,
+                                "slope": -1.81259,
+                                "mean": 519570
+                            },
+                            "sent": {
+                                "sum": 366784,
+                                "lastUpd": 5339169.083452,
+                                "dev": 41.3694,
+                                "slope": -1.18908,
+                                "mean": 366784
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 534171290
+                        },
+                        "seq": 54593,
+                        "rtt": {
+                            "sum": 988524,
+                            "lastUpd": 5339169.02559,
+                            "dev": 8922.81,
+                            "slope": 7224.6,
+                            "mean": 91010.1
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 11142500
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508517532.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508517574
+                },
+                "session": {
+                    "now": 5339152.047186,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339152.046609,
+                        "sum": 338317,
+                        "dev": 0.294475,
+                        "slope": -0.00348318,
+                        "mean": 51.9964
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 530044302,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339152.047137,
+                        "sum": 18241900.0,
+                        "dev": 0.217911,
+                        "slope": -0.00121247,
+                        "mean": 1380
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 15750020
+                        },
+                        "choked": 1,
+                        "p": "0xb87e30",
+                        "cwd": 879735,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339152.046607,
+                                "sum": 524050,
+                                "dev": 28.0041,
+                                "slope": 0.0486021,
+                                "mean": 524050
+                            },
+                            "delivered": {
+                                "lastUpd": 5339152.046608,
+                                "sum": 18311000.0,
+                                "dev": 255.392,
+                                "slope": -0.500072,
+                                "mean": 18311000.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339152.046606,
+                                "sum": 18320800.0,
+                                "dev": 1626.51,
+                                "slope": 2.89272,
+                                "mean": 18320800.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 64276,
+                        "rtt": {
+                            "lastUpd": 5339150.082315,
+                            "sum": null,
+                            "dev": null,
+                            "slope": null,
+                            "mean": null
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 531580786
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508517574.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "self": {
+                    "swapped_virtual_memory": {
+                        "units": "B",
+                        "value": 0
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 1.3978309114738552e-05
+                    },
+                    "resident_set_size": {
+                        "units": "B",
+                        "value": 11202560
+                    },
+                    "virtual_memory": {
+                        "units": "B",
+                        "value": 48832512
+                    }
+                },
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508492541
+                },
+                "system": {
+                    "disk": {
+                        "available": {
+                            "units": "B",
+                            "value": 6360358912
+                        },
+                        "capacity": {
+                            "units": "B",
+                            "value": 8259014656
+                        },
+                        "free": {
+                            "units": "B",
+                            "value": 6377136128
+                        }
+                    },
+                    "swap": {
+                        "free": {
+                            "units": "B",
+                            "value": 0
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 0
+                        }
+                    },
+                    "ram": {
+                        "free": {
+                            "units": "B",
+                            "value": 3566985216
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 4142174208
+                        }
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 0.3434565301787946
+                    }
+                },
+                "interval": {
+                    "units": "msec",
+                    "value": 5000
+                }
+            },
+            "source": "testd3",
+            "op": "Device.HostStatus",
+            "ts": 1550508518292.0
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508522534
+                },
+                "session": {
+                    "now": 5339174.085287,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18180000.0,
+                        "lastUpd": 5339174.085169,
+                        "dev": 3.83034,
+                        "slope": -0.00403558,
+                        "mean": 1379.97
+                    },
+                    "byteOut": 12050284,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 340129,
+                        "lastUpd": 5339174.085124,
+                        "dev": 0.02514,
+                        "slope": 0.000182074,
+                        "mean": 52
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 923857,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18361300.0,
+                                "lastUpd": 5339174.082354,
+                                "dev": 3961.88,
+                                "slope": -10.1001,
+                                "mean": 18361300.0
+                            },
+                            "delivered": {
+                                "sum": 519851,
+                                "lastUpd": 5339174.082355,
+                                "dev": 29.7125,
+                                "slope": -0.0895604,
+                                "mean": 519851
+                            },
+                            "sent": {
+                                "sum": 367621,
+                                "lastUpd": 5339174.082353,
+                                "dev": 82.017,
+                                "slope": -0.17695,
+                                "mean": 367621
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 625176558
+                        },
+                        "seq": 54145,
+                        "rtt": {
+                            "sum": 1021010.0,
+                            "lastUpd": 5339173.986897,
+                            "dev": 19945.7,
+                            "slope": 12432.1,
+                            "mean": 146651
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 12960520
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508522534.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508522574
+                },
+                "session": {
+                    "now": 5339157.047204,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339157.047114,
+                        "sum": 339627,
+                        "dev": 0.294859,
+                        "slope": -0.00332265,
+                        "mean": 51.9964
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 620833558,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339157.042899,
+                        "sum": 18335400.0,
+                        "dev": 3.56164,
+                        "slope": -0.00109064,
+                        "mean": 1379.97
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 18348232
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 948409,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339157.04715,
+                                "sum": 525760,
+                                "dev": 28.0071,
+                                "slope": 0.0223375,
+                                "mean": 525760
+                            },
+                            "delivered": {
+                                "lastUpd": 5339157.047151,
+                                "sum": 18382000.0,
+                                "dev": 331.397,
+                                "slope": -0.0714216,
+                                "mean": 18382000.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339157.04715,
+                                "sum": 18329600.0,
+                                "dev": 4025.45,
+                                "slope": -7.47994,
+                                "mean": 18329600.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 31196,
+                        "rtt": {
+                            "lastUpd": 5339156.978198,
+                            "sum": 1058880.0,
+                            "dev": 13554.9,
+                            "slope": 9512.34,
+                            "mean": 145101
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 622633210
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508522574.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508527536
+                },
+                "session": {
+                    "now": 5339179.086937,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18491800.0,
+                        "lastUpd": 5339179.086835,
+                        "dev": 1.59473,
+                        "slope": 0.0111952,
+                        "mean": 1380
+                    },
+                    "byteOut": 13980308,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 348342,
+                        "lastUpd": 5339179.086788,
+                        "dev": 2.37906,
+                        "slope": -0.674755,
+                        "mean": 52.2038
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 991467,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18672300.0,
+                                "lastUpd": 5339179.086685,
+                                "dev": 2939.86,
+                                "slope": 45.9377,
+                                "mean": 18672300.0
+                            },
+                            "delivered": {
+                                "sum": 534384,
+                                "lastUpd": 5339179.086695,
+                                "dev": 30.1793,
+                                "slope": 0.0477988,
+                                "mean": 534384
+                            },
+                            "sent": {
+                                "sum": 376337,
+                                "lastUpd": 5339179.086684,
+                                "dev": 62.9999,
+                                "slope": -0.0340964,
+                                "mean": 376337
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 717246158
+                        },
+                        "seq": 54454,
+                        "rtt": {
+                            "sum": 1048360.0,
+                            "lastUpd": 5339179.080606,
+                            "dev": 7163.95,
+                            "slope": 969.76,
+                            "mean": 97289.1
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 15030192
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508527536.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508527576
+                },
+                "session": {
+                    "now": 5339162.048687,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339162.047968,
+                        "sum": 348067,
+                        "dev": 2.34803,
+                        "slope": -0.658357,
+                        "mean": 52.1919
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 710769546,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339162.047608,
+                        "sum": 18547100.0,
+                        "dev": 1.55587,
+                        "slope": 0.0106734,
+                        "mean": 1380
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 21212776
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 1021293,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339162.047964,
+                                "sum": 537765,
+                                "dev": 28.1496,
+                                "slope": -0.661128,
+                                "mean": 537765
+                            },
+                            "delivered": {
+                                "lastUpd": 5339162.047965,
+                                "sum": 18716100.0,
+                                "dev": 355.821,
+                                "slope": 1.87691,
+                                "mean": 18716100.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339162.047963,
+                                "sum": 18610600.0,
+                                "dev": 2639.86,
+                                "slope": 6.52067,
+                                "mean": 18610600.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 576,
+                        "rtt": {
+                            "lastUpd": 5339162.011425,
+                            "sum": 1048900.0,
+                            "dev": 7764.25,
+                            "slope": 1348.59,
+                            "mean": 97402.1
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 712829898
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508527576.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508532537
+                },
+                "session": {
+                    "now": 5339184.088571,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18149100.0,
+                        "lastUpd": 5339184.088468,
+                        "dev": 0.142505,
+                        "slope": -0.000230123,
+                        "mean": 1380
+                    },
+                    "byteOut": 15660716,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 339598,
+                        "lastUpd": 5339184.088423,
+                        "dev": 0.202875,
+                        "slope": -0.0118905,
+                        "mean": 52.0014
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 1056059,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18323200.0,
+                                "lastUpd": 5339184.088465,
+                                "dev": 2538.98,
+                                "slope": 7.30196,
+                                "mean": 18323200.0
+                            },
+                            "delivered": {
+                                "sum": 523165,
+                                "lastUpd": 5339184.088466,
+                                "dev": 29.6711,
+                                "slope": 0.140892,
+                                "mean": 523165
+                            },
+                            "sent": {
+                                "sum": 366922,
+                                "lastUpd": 5339184.088464,
+                                "dev": 53.9671,
+                                "slope": 0.158877,
+                                "mean": 366922
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 807836090
+                        },
+                        "seq": 53690,
+                        "rtt": {
+                            "sum": 1052590.0,
+                            "lastUpd": 5339183.931622,
+                            "dev": 3500.18,
+                            "slope": 744.264,
+                            "mean": 105320
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 16839868
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508532537.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508532577
+                },
+                "session": {
+                    "now": 5339167.049391,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339167.049302,
+                        "sum": 334972,
+                        "dev": 0.358129,
+                        "slope": -0.0152766,
+                        "mean": 51.9977
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 799794726,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339167.048535,
+                        "sum": 17780700.0,
+                        "dev": 0.416566,
+                        "slope": -0.00236603,
+                        "mean": 1380
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 23792412
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 1090389,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339167.04933,
+                                "sum": 518647,
+                                "dev": 28.0004,
+                                "slope": -0.00430863,
+                                "mean": 518647
+                            },
+                            "delivered": {
+                                "lastUpd": 5339167.049331,
+                                "sum": 18130000.0,
+                                "dev": 380.9,
+                                "slope": -0.840648,
+                                "mean": 18130000.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339167.049329,
+                                "sum": 17837000.0,
+                                "dev": 2308.81,
+                                "slope": -9.79164,
+                                "mean": 17837000.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 32801,
+                        "rtt": {
+                            "lastUpd": 5339166.853112,
+                            "sum": 967548,
+                            "dev": 7941.12,
+                            "slope": -632.94,
+                            "mean": 103949
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 802113130
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508532577.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "self": {
+                    "swapped_virtual_memory": {
+                        "units": "B",
+                        "value": 0
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 2.866342572132079
+                    },
+                    "resident_set_size": {
+                        "units": "B",
+                        "value": 10977280
+                    },
+                    "virtual_memory": {
+                        "units": "B",
+                        "value": 48590848
+                    }
+                },
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508497542
+                },
+                "system": {
+                    "disk": {
+                        "available": {
+                            "units": "B",
+                            "value": 6360342528
+                        },
+                        "capacity": {
+                            "units": "B",
+                            "value": 8259014656
+                        },
+                        "free": {
+                            "units": "B",
+                            "value": 6377119744
+                        }
+                    },
+                    "swap": {
+                        "free": {
+                            "units": "B",
+                            "value": 0
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 0
+                        }
+                    },
+                    "ram": {
+                        "free": {
+                            "units": "B",
+                            "value": 3567091712
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 4142174208
+                        }
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 5.0760780352294965
+                    }
+                },
+                "interval": {
+                    "units": "msec",
+                    "value": 5001
+                }
+            },
+            "source": "testd3",
+            "op": "Device.HostStatus",
+            "ts": 1550508535316.0
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508537539
+                },
+                "session": {
+                    "now": 5339189.090166,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18266600.0,
+                        "lastUpd": 5339189.090058,
+                        "dev": 0.0444314,
+                        "slope": 0.00068587,
+                        "mean": 1380
+                    },
+                    "byteOut": 17339980,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 341742,
+                        "lastUpd": 5339189.089957,
+                        "dev": 0.0300945,
+                        "slope": 2.76019e-05,
+                        "mean": 52
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 1120713,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18444600.0,
+                                "lastUpd": 5339189.090056,
+                                "dev": 2713.44,
+                                "slope": -14.7263,
+                                "mean": 18444600.0
+                            },
+                            "delivered": {
+                                "sum": 531035,
+                                "lastUpd": 5339189.090057,
+                                "dev": 29.4248,
+                                "slope": 0.0304364,
+                                "mean": 531035
+                            },
+                            "sent": {
+                                "sum": 369144,
+                                "lastUpd": 5339189.090055,
+                                "dev": 56.9431,
+                                "slope": -0.275852,
+                                "mean": 369144
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 898365086
+                        },
+                        "seq": 52878,
+                        "rtt": {
+                            "sum": 1050560.0,
+                            "lastUpd": 5339189.047857,
+                            "dev": 3953.58,
+                            "slope": 535.32,
+                            "mean": 107086
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 18648312
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508537539.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508537580
+                },
+                "session": {
+                    "now": 5339172.052885,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339172.052773,
+                        "sum": 341291,
+                        "dev": 0.293475,
+                        "slope": -0.00341019,
+                        "mean": 51.9964
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 889547166,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339172.052839,
+                        "sum": 18216200.0,
+                        "dev": 0.373458,
+                        "slope": 0.000348304,
+                        "mean": 1380
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 26385472
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 1142511,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339172.052826,
+                                "sum": 528428,
+                                "dev": 28.007,
+                                "slope": 0.00920557,
+                                "mean": 528428
+                            },
+                            "delivered": {
+                                "lastUpd": 5339172.052827,
+                                "sum": 18477200.0,
+                                "dev": 361.578,
+                                "slope": -0.621288,
+                                "mean": 18477200.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339172.052825,
+                                "sum": 18284600.0,
+                                "dev": 2485.85,
+                                "slope": -2.47407,
+                                "mean": 18284600.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 65192,
+                        "rtt": {
+                            "lastUpd": 5339171.969036,
+                            "sum": 1051000.0,
+                            "dev": 4547.63,
+                            "slope": 584.269,
+                            "mean": 107019
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 892125730
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508537580.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508542540
+                },
+                "session": {
+                    "now": 5339194.091786,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18113800.0,
+                        "lastUpd": 5339194.091686,
+                        "dev": 0.0491397,
+                        "slope": 0.00114775,
+                        "mean": 1380
+                    },
+                    "byteOut": 18997716,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 338381,
+                        "lastUpd": 5339194.091599,
+                        "dev": 0.0251962,
+                        "slope": 0.000183586,
+                        "mean": 52
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 1154519,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18294300.0,
+                                "lastUpd": 5339194.091683,
+                                "dev": 3382,
+                                "slope": -14.25,
+                                "mean": 18294300.0
+                            },
+                            "delivered": {
+                                "sum": 520649,
+                                "lastUpd": 5339194.091684,
+                                "dev": 29.5911,
+                                "slope": -0.308304,
+                                "mean": 520649
+                            },
+                            "sent": {
+                                "sum": 365663,
+                                "lastUpd": 5339194.091683,
+                                "dev": 69.786,
+                                "slope": -0.316359,
+                                "mean": 365663
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 987784474
+                        },
+                        "seq": 51270,
+                        "rtt": {
+                            "sum": 1061250.0,
+                            "lastUpd": 5339194.088012,
+                            "dev": 7106.28,
+                            "slope": 4959.63,
+                            "mean": 131421
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 20433572
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508542540.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508542580
+                },
+                "session": {
+                    "now": 5339177.053164,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339177.053057,
+                        "sum": 338303,
+                        "dev": 0.294666,
+                        "slope": -0.00329846,
+                        "mean": 51.9964
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 978297726,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339177.053117,
+                        "sum": 18183100.0,
+                        "dev": 0.39401,
+                        "slope": 0.000873884,
+                        "mean": 1380
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 28937852
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 1176938,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339177.053105,
+                                "sum": 523834,
+                                "dev": 27.9997,
+                                "slope": 0.00897603,
+                                "mean": 523834
+                            },
+                            "delivered": {
+                                "lastUpd": 5339177.053105,
+                                "sum": 18337700.0,
+                                "dev": 375.426,
+                                "slope": 1.12035,
+                                "mean": 18337700.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339177.053104,
+                                "sum": 18249900.0,
+                                "dev": 3143.18,
+                                "slope": -0.529628,
+                                "mean": 18249900.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 31534,
+                        "rtt": {
+                            "lastUpd": 5339177.009074,
+                            "sum": 1056620.0,
+                            "dev": 7987.55,
+                            "slope": 4610.31,
+                            "mean": 130806
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 981133546
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508542580.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508547542
+                },
+                "session": {
+                    "now": 5339199.093417,
+                    "unord": 0,
+                    "bps_in": {
+                        "sum": 18187000.0,
+                        "lastUpd": 5339199.093316,
+                        "dev": 4.01858,
+                        "slope": 0.017042,
+                        "mean": 1379.98
+                    },
+                    "byteOut": 20975432,
+                    "policy": "WifiFirst",
+                    "sInfo": {},
+                    "ptr": "0x7f7a4f809010",
+                    "bps_out": {
+                        "sum": 387555,
+                        "lastUpd": 5339199.093218,
+                        "dev": 9.2212,
+                        "slope": -2.52702,
+                        "mean": 55.4786
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "choked": 0,
+                        "p": "0x88d0a0",
+                        "cwd": 1188252,
+                        "instance_id": "1",
+                        "unord": 0,
+                        "bw": {
+                            "received": {
+                                "sum": 18367700.0,
+                                "lastUpd": 5339199.093313,
+                                "dev": 4030.86,
+                                "slope": 69.3845,
+                                "mean": 18367700.0
+                            },
+                            "delivered": {
+                                "sum": 583266,
+                                "lastUpd": 5339199.093314,
+                                "dev": 36.9585,
+                                "slope": -2.3036,
+                                "mean": 583266
+                            },
+                            "sent": {
+                                "sum": 416853,
+                                "lastUpd": 5339199.093313,
+                                "dev": 138.702,
+                                "slope": -2.43443,
+                                "mean": 416853
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "received": {
+                            "rpt": 0,
+                            "new": 1078146394
+                        },
+                        "seq": 50329,
+                        "rtt": {
+                            "sum": 939048,
+                            "lastUpd": 5339199.041175,
+                            "dev": 48717.4,
+                            "slope": -5393.66,
+                            "mean": 63865.4
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 22551480
+                        },
+                        "tag": "Cell"
+                    }
+                }
+            },
+            "ts": 1550508547542.0,
+            "source": "testd4",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508547582
+                },
+                "session": {
+                    "now": 5339182.05466,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339182.054527,
+                        "sum": 385775,
+                        "dev": 9.08631,
+                        "slope": -2.5699,
+                        "mean": 55.3532
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 1066161642,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339182.054617,
+                        "sum": 17997500.0,
+                        "dev": 3.93469,
+                        "slope": 0.0198679,
+                        "mean": 1379.98
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 31833012
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 1214100,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339182.054524,
+                                "sum": 574542,
+                                "dev": 30.3609,
+                                "slope": -3.05971,
+                                "mean": 574542
+                            },
+                            "delivered": {
+                                "lastUpd": 5339182.054525,
+                                "sum": 18419900.0,
+                                "dev": 376.34,
+                                "slope": 1.29401,
+                                "mean": 18419900.0
+                            },
+                            "sent": {
+                                "lastUpd": 5339182.054524,
+                                "sum": 18066400.0,
+                                "dev": 3429.58,
+                                "slope": 17.9542,
+                                "mean": 18066400.0
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 1048,
+                        "rtt": {
+                            "lastUpd": 5339182.022296,
+                            "sum": 940724,
+                            "dev": 47567.6,
+                            "slope": -4483.45,
+                            "mean": 63566.3
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 1069252154
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508547582.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "self": {
+                    "swapped_virtual_memory": {
+                        "units": "B",
+                        "value": 0
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 3.4523579469920223e-05
+                    },
+                    "resident_set_size": {
+                        "units": "B",
+                        "value": 10964992
+                    },
+                    "virtual_memory": {
+                        "units": "B",
+                        "value": 48578560
+                    }
+                },
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508502543
+                },
+                "system": {
+                    "disk": {
+                        "available": {
+                            "units": "B",
+                            "value": 6360326144
+                        },
+                        "capacity": {
+                            "units": "B",
+                            "value": 8259014656
+                        },
+                        "free": {
+                            "units": "B",
+                            "value": 6377103360
+                        }
+                    },
+                    "swap": {
+                        "free": {
+                            "units": "B",
+                            "value": 0
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 0
+                        }
+                    },
+                    "ram": {
+                        "free": {
+                            "units": "B",
+                            "value": 3566997504
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 4142174208
+                        }
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 0.3434909936318889
+                    }
+                },
+                "interval": {
+                    "units": "msec",
+                    "value": 5000
+                }
+            },
+            "source": "testd3",
+            "op": "Device.HostStatus",
+            "ts": 1550508551336.0
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508552585
+                },
+                "session": {
+                    "now": 5339187.057602,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339187.022752,
+                        "sum": 7820.67,
+                        "dev": 177.626,
+                        "slope": -16.6251,
+                        "mean": 52.9773
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 1088016560,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339183.300516,
+                        "sum": null,
+                        "dev": null,
+                        "slope": null,
+                        "mean": null
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 32441173
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 1223148,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339187.022742,
+                                "sum": 12122.3,
+                                "dev": 93.4722,
+                                "slope": -8.68107,
+                                "mean": 12122.3
+                            },
+                            "delivered": {
+                                "lastUpd": 5339187.022742,
+                                "sum": 457762,
+                                "dev": 3423.67,
+                                "slope": -97.3374,
+                                "mean": 457762
+                            },
+                            "sent": {
+                                "lastUpd": 5339187.022741,
+                                "sum": 425423,
+                                "dev": 4813.87,
+                                "slope": -160.134,
+                                "mean": 425423
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 8536,
+                        "rtt": {
+                            "lastUpd": 5339183.301402,
+                            "sum": null,
+                            "dev": null,
+                            "slope": null,
+                            "mean": null
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 1091170456
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508552585.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508557585
+                },
+                "session": {
+                    "now": 5339192.057822,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339192.024736,
+                        "sum": 80.5909,
+                        "dev": 2767.8,
+                        "slope": -1963.74,
+                        "mean": 40.4429
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 1088016560,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339183.300516,
+                        "sum": null,
+                        "dev": null,
+                        "slope": null,
+                        "mean": null
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 32441233
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 1223149,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339192.024726,
+                                "sum": 93.8541,
+                                "dev": 2169.65,
+                                "slope": -1241.13,
+                                "mean": 93.8541
+                            },
+                            "delivered": {
+                                "lastUpd": 5339192.024727,
+                                "sum": 3098.35,
+                                "dev": 81850.5,
+                                "slope": -46675,
+                                "mean": 3098.35
+                            },
+                            "sent": {
+                                "lastUpd": 5339192.024725,
+                                "sum": 2860.86,
+                                "dev": 76010.8,
+                                "slope": -43335.1,
+                                "mean": 2860.86
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 8537,
+                        "rtt": {
+                            "lastUpd": 5339187.063588,
+                            "sum": null,
+                            "dev": null,
+                            "slope": null,
+                            "mean": null
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 1091170464
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508557585.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508562586
+                },
+                "session": {
+                    "now": 5339197.059112,
+                    "unord": 0,
+                    "bps_in": {
+                        "lastUpd": 5339197.023482,
+                        "sum": 28.5437,
+                        "dev": 322.918,
+                        "slope": -76.8879,
+                        "mean": 28.1651
+                    },
+                    "policy": "WifiFirst",
+                    "byteOut": 1088016560,
+                    "sInfo": {},
+                    "ptr": "0x7f1290f8d010",
+                    "bps_out": {
+                        "lastUpd": 5339183.300516,
+                        "sum": null,
+                        "dev": null,
+                        "slope": null,
+                        "mean": null
+                    }
+                },
+                "subflows": {
+                    "1": {
+                        "hib": 0,
+                        "tag": "Cell",
+                        "received": {
+                            "rpt": 0,
+                            "new": 32441293
+                        },
+                        "choked": 0,
+                        "p": "0xb87e30",
+                        "cwd": 1223150,
+                        "instance_id": "1",
+                        "bw": {
+                            "received": {
+                                "lastUpd": 5339197.023471,
+                                "sum": 12.9709,
+                                "dev": 330.924,
+                                "slope": -143.806,
+                                "mean": 12.9709
+                            },
+                            "delivered": {
+                                "lastUpd": 5339197.023472,
+                                "sum": 40.9872,
+                                "dev": 11965.8,
+                                "slope": -3750.21,
+                                "mean": 40.9872
+                            },
+                            "sent": {
+                                "lastUpd": 5339197.02347,
+                                "sum": 19.3569,
+                                "dev": 11117.7,
+                                "slope": -3483.44,
+                                "mean": 19.3569
+                            }
+                        },
+                        "cond": 0,
+                        "act": 0,
+                        "cgnct": 0,
+                        "retrans": 0,
+                        "lcgnct": 0,
+                        "seq": 8538,
+                        "rtt": {
+                            "lastUpd": 5339192.066862,
+                            "sum": null,
+                            "dev": null,
+                            "slope": null,
+                            "mean": null
+                        },
+                        "sst": 100000,
+                        "sent": {
+                            "rpt": 0,
+                            "new": 1091170472
+                        },
+                        "unord": 0
+                    }
+                }
+            },
+            "ts": 1550508562586.0,
+            "source": "testd3",
+            "op": "Usage.Stats",
+            "session": "0E01B2C6E960A46C586EE7432992E1EE51E36368B53D7D8CA40F06D2CA876F942F346DE89C186C96FF83FD2B881CA0CA494BFF02CF7F19BD36A9B6141EAFC69D"
+        },
+        {
+            "payload": {
+                "self": {
+                    "swapped_virtual_memory": {
+                        "units": "B",
+                        "value": 0
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 5.208628205854045
+                    },
+                    "resident_set_size": {
+                        "units": "B",
+                        "value": 10944512
+                    },
+                    "virtual_memory": {
+                        "units": "B",
+                        "value": 48545792
+                    }
+                },
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508507543
+                },
+                "system": {
+                    "disk": {
+                        "available": {
+                            "units": "B",
+                            "value": 6360309760
+                        },
+                        "capacity": {
+                            "units": "B",
+                            "value": 8259014656
+                        },
+                        "free": {
+                            "units": "B",
+                            "value": 6377086976
+                        }
+                    },
+                    "swap": {
+                        "free": {
+                            "units": "B",
+                            "value": 0
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 0
+                        }
+                    },
+                    "ram": {
+                        "free": {
+                            "units": "B",
+                            "value": 3567374336
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 4142174208
+                        }
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 8.984883655098228
+                    }
+                },
+                "interval": {
+                    "units": "msec",
+                    "value": 5000
+                }
+            },
+            "source": "testd3",
+            "op": "Device.HostStatus",
+            "ts": 1550508568344.0
+        },
+        {
+            "payload": {
+                "self": {
+                    "swapped_virtual_memory": {
+                        "units": "B",
+                        "value": 0
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 5.6991998752574144e-05
+                    },
+                    "resident_set_size": {
+                        "units": "B",
+                        "value": 10944512
+                    },
+                    "virtual_memory": {
+                        "units": "B",
+                        "value": 48545792
+                    }
+                },
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508512544
+                },
+                "system": {
+                    "disk": {
+                        "available": {
+                            "units": "B",
+                            "value": 6360293376
+                        },
+                        "capacity": {
+                            "units": "B",
+                            "value": 8259014656
+                        },
+                        "free": {
+                            "units": "B",
+                            "value": 6377070592
+                        }
+                    },
+                    "swap": {
+                        "free": {
+                            "units": "B",
+                            "value": 0
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 0
+                        }
+                    },
+                    "ram": {
+                        "free": {
+                            "units": "B",
+                            "value": 3566886912
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 4142174208
+                        }
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 0.3435334618470852
+                    }
+                },
+                "interval": {
+                    "units": "msec",
+                    "value": 5000
+                }
+            },
+            "source": "testd3",
+            "op": "Device.HostStatus",
+            "ts": 1550508585351.0
+        },
+        {
+            "payload": {
+                "self": {
+                    "swapped_virtual_memory": {
+                        "units": "B",
+                        "value": 0
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 5.844611244041358e-05
+                    },
+                    "resident_set_size": {
+                        "units": "B",
+                        "value": 10944512
+                    },
+                    "virtual_memory": {
+                        "units": "B",
+                        "value": 48545792
+                    }
+                },
+                "timestamp": {
+                    "units": "msec",
+                    "value": 1550508517545
+                },
+                "system": {
+                    "disk": {
+                        "available": {
+                            "units": "B",
+                            "value": 6360276992
+                        },
+                        "capacity": {
+                            "units": "B",
+                            "value": 8259014656
+                        },
+                        "free": {
+                            "units": "B",
+                            "value": 6377054208
+                        }
+                    },
+                    "swap": {
+                        "free": {
+                            "units": "B",
+                            "value": 0
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 0
+                        }
+                    },
+                    "ram": {
+                        "free": {
+                            "units": "B",
+                            "value": 3567095808
+                        },
+                        "total": {
+                            "units": "B",
+                            "value": 4142174208
+                        }
+                    },
+                    "cpu": {
+                        "units": "%",
+                        "value": 0.3435356948514773
+                    }
+                },
+                "interval": {
+                    "units": "msec",
+                    "value": 347
+                }
+            },
+            "source": "testd3",
+            "op": "Device.HostStatus",
+            "ts": 1550508603358.0
+        }
+    ]
+}
