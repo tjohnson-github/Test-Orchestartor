@@ -1,0 +1,29 @@
+
+sleep 5
+install clientd 
+sleep 15
+startapp clientd test.v6.tsdn.io
+sleep 5
+command Wifi Enable
+sleep 5
+command Cell Enable
+sleep 2
+start iperf server
+sleep 2
+start iperf client 60
+sleep 10
+command Wifi Disable
+sleep 20
+command Wifi Enable
+sleep(5)
+command Cell Disable
+sleep 10
+command Cell Enable
+sleep(5)
+command Wifi Disable
+sleep 10
+command Wifi Enable
+sleep 25
+stop
+sleep 5
+exit

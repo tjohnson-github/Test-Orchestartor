@@ -1,0 +1,9 @@
+clients 3
+sleep 2
+start iperf server
+sleep 2
+start iperf client 60
+sleep 65
+stop
+sleep 7
+exit

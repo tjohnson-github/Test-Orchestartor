@@ -1,0 +1,3 @@
+[console_scripts]
+test-orchestrator = test_orchestrator.orchestrator:main
+

@@ -1,0 +1,15 @@
+clients 3
+sleep 5
+start client process sudo openvpn --script-security 2 --config /home/ubuntu/client.ovpn
+sleep 10
+client addroute
+sleep 5
+start iperf server
+sleep 10
+start iperf client 60
+sleep 75
+stop
+sleep 7
+start client process sudo pkill openvpn
+sleep 5
+exit

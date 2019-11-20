@@ -1,0 +1,41 @@
+{
+  "counter": "",      
+  "subflow": "Cell",      
+  "download": {
+    "throughput": {
+      "units": "Mbit/s",  
+      "value": 10
+    },
+    "delay": {
+      "units": "msec",
+      "value": 5
+    },
+    "jitter": {
+      "units": "msec",
+      "value": 5
+    },
+    "loss": {
+      "units": "%",
+      "value": 15
+    }
+  },
+  "upload": {
+    "throughput": {
+      "units": "Mbit/s",  
+      "value": 10
+    },
+    "delay": {
+      "units": "msec",
+      "value": 5
+    },
+    "jitter": {
+      "units": "msec",
+      "value": 5
+    },
+    "loss": {
+      "units": "%",
+      "value": 15
+    }
+  }        
+}
+

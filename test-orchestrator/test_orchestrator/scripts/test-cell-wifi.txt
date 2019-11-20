@@ -1,0 +1,27 @@
+clients 3
+sleep 5
+install jumpnet-gateway 
+install jumpnet-client
+sleep 15
+startapp client
+sleep 10
+command Cell Enable
+sleep5
+command Wifi Enable
+sleep 10
+usagestats gateway
+usagestats client
+sleep 10
+PolicySet "Continuity Only" 1 WifiFirst WifiFirst
+PolicyWait
+TrafficControl baseline
+sleep 5
+DeviceStatus gateway
+DeviceStatus client
+iperf server
+sleep 10
+iperf client 60
+sleep 75
+stop
+sleep 7
+exit

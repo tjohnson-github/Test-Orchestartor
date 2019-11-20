@@ -1,0 +1,6 @@
+sleep 2
+start client process sudo supervisorctl stop test-client 
+start server process sudo supervisorctl stop test-ixendpoint 
+exit
+
+

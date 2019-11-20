@@ -1,0 +1,27 @@
+CREATE TABLE IF NOT EXISTS testtier.usagestats (
+    date timestamp,
+    test_id uuid,
+    session_id text,
+    source text,
+    name text,
+    session_ptr text,
+    session_unord int,
+    session_bps_in_mean double,
+    session_bps_in_dev double,
+    session_bps_in_slope double,
+    session_bps_in_lastUpd double,
+    session_bps_in_sum double,
+    session_byteOut int,
+    session_policy text,
+    session_bps_out_mean double,
+    session_bps_out_dev double,
+    session_bps_out_slope double,
+    session_bps_out_lastUpd double,
+    session_bps_out_sum double,
+    session_now double,
+    timestamp_value double,
+    timestamp_units text,
+    raw_json text,
+    PRIMARY KEY (test_id, date)
+) WITH CLUSTERING ORDER BY (date DESC);
+

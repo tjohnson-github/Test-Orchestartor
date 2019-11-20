@@ -1,0 +1,13 @@
+sleep 2
+startapp clientd bronze.v6.jsdn.io
+sleep 5
+command wifi up
+sleep 2
+start iperf server
+sleep 2
+start iperf client 60
+sleep 65
+stop
+sleep 5
+s3cmd s3://testtier-results
+exit

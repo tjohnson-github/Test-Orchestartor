@@ -1,0 +1,16 @@
+[Unit]
+Description= Trinity orchestrator service
+
+[Service]
+Environment=ANALYTICS_USER=guest
+Environment=ANALYTICS_PASSWORD=guest
+Environment=ANALYTICS_HOST=localhost
+Environment=DATABASE_HOST=cassandra.test.v6.tsdn.io
+ExecStart=/trinity/endpoint/test-orchestrator/run
+MemoryLimit=512M
+Restart=always
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target
+

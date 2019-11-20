@@ -1,0 +1,15 @@
+clients 3 test.v6.jsdn.io
+sleep 5
+install clientd 
+sleep 15
+startapp clientd secure00.privatecom.com
+sleep 10
+command Cell Enable
+sleep 10
+start iperf server
+sleep 10
+start iperf client 60
+sleep 75
+stop
+sleep 7
+exit

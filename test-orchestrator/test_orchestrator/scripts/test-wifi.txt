@@ -1,0 +1,25 @@
+Clients 3
+Sleep 5
+Install jumpnet-gateway 
+Install jumpnet-client
+Sleep 15
+JumpnetClient
+Sleep 10
+SubflowEnable Interface.Enable Wifi
+Sleep 10
+UsageStats gateway
+UsageStats client
+Sleep 10
+PolicySet "Continuity Only" 1 WifiFirst WifiFirst
+PolicyWait
+TrafficControl baseline
+Sleep 5
+DeviceStatus gateway
+DeviceStatus client
+IperfServer
+Sleep 10
+IperfClient 60
+Sleep 75
+Stop
+Sleep 7
+Exit

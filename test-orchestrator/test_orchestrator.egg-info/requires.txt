@@ -1,0 +1,3 @@
+jumpnet-core-py>=7.3.2
+celery
+test-common

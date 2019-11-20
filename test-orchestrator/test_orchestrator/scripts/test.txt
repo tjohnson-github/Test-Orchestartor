@@ -1,0 +1,14 @@
+sleep 2
+startapp clientd test.v6.tsdn.io
+sleep 5
+command wifi up
+sleep 5
+command cell up
+sleep 2
+start iperf server
+sleep 2
+start iperf client 60
+sleep 65
+stop
+sleep 5
+exit
