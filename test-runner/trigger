@@ -1,0 +1,48 @@
+# Variables for Running the Testbed Trigger
+
+if [ "$#" -lt 2 ]; then
+    echo "usage: [test-name] [targets] [project name] [ref name] [project type] "
+    exit 0
+fi
+
+#
+# Customize the Project Here
+#
+TEST_NAME=$1
+DISPATCH_PACKAGES=$2
+DISPATCH_PROJECT_NAME=$3
+DISPATCH_REF_NAME=$4
+DISPATCH_PROJECT_TYPE=$5
+DISPATCH_TARGETS=$6
+
+
+echo ""
+echo ""
+echo "           Trigger Dispatch           "
+echo ""
+echo "TestName: $TEST_NAME"
+echo " Project: $DISPATCH_PROJECT_NAME"
+echo "Packages: $DISPATCH_PACKAGES"
+echo "     Ref: $DISPATCH_REF_NAME"
+echo "    Type: $DISPATCH_PROJECT_TYPE"
+echo " Targets: $DISPATCH_TARGETS"
+echo ""
+echo ""
+
+#
+# Trigger Logic - run a test
+#
+TRIGGER_PROJECT_ID=322 # test/test-runner
+TRIGGER_TOKEN=b6fa3cbd8705d92cebe78522957456
+TRIGGER_REF_NAME=master
+
+PARAMS="$PARAMS -F variables[TEST_NAME]=$TEST_NAME"
+PARAMS="$PARAMS -F variables[DISPATCH_PROJECT_NAME]=$DISPATCH_PROJECT_NAME"
+PARAMS="$PARAMS -F variables[DISPATCH_REF_NAME]=$DISPATCH_REF_NAME"
+PARAMS="$PARAMS -F variables[DISPATCH_PROJECT_TYPE]=$DISPATCH_PROJECT_TYPE"
+PARAMS="$PARAMS -F variables[DISPATCH_TARGETS]=$DISPATCH_TARGETS"
+PARAMS="$PARAMS -F variables[DISPATCH_PACKAGES]=$DISPATCH_PACKAGES"
+
+
+PIPELINE_URL=https://gitlab.trinity.cc/api/v4/projects/$TRIGGER_PROJECT_ID/trigger/pipeline
+curl -X POST -F token=$TRIGGER_TOKEN -F ref=$TRIGGER_REF_NAME $PARAMS $PIPELINE_URL

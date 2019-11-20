@@ -1,0 +1,126 @@
+#!/bin/bash
+set -e
+
+
+echo ""
+echo ""
+echo "           Test Tier Dispatch           "
+echo ""
+echo " Project: $DISPATCH_PROJECT_NAME"
+echo " Test_Id: $TEST_ID"
+echo "    Hash: $DISPATCH_COMMIT_SHA"
+echo "     Ref: $DISPATCH_REF_NAME"
+echo "     Tag: $DISPATCH_TAG"
+echo "    Type: $DISPATCH_PROJECT_TYPE"
+echo " Targets: $DISPATCH_TARGETS"
+echo "Packages: $DISPATCH_PACKAGES"
+echo ""
+echo ""
+
+# Apply defaults
+if [ -z "$NUMBER_CLIENTS" ]; then
+	NUMBER_CLIENTS=1
+fi
+if [ -z "$GATEWAY" ]; then
+	GATEWAY=tsdn.io
+fi
+if [ -z "$PROTOCOL" ]; then
+	PROTOCOL=tcp
+fi
+if [ -z "$TEST_NAME" ]; then
+	TEST_NAME=test-cell
+fi
+if [ -z "$TIER_NAME" ]; then
+	TIER_NAME=tsdn.io
+fi
+if [ -z "$TEST_MODE" ]; then
+	TEST_MODE='download'
+fi
+if [ -z "$ENCRYPTION" ]; then
+	ENCRYPTION='OFF'
+fi
+
+
+DEBIAN_REPO=development
+if [ -n "$DISPATCH_TAG" ]; then
+	DEBIAN_REPO=master
+fi
+
+# removed empty check because we are handling empty packages from scheduled task to build the latest version from development
+if [ -z "$PACKAGES" ]; then
+	PACKAGES=$DISPATCH_PACKAGES
+#	# TODO: can we safely use defaults/latest packages?
+#	if [ -z "$PACKAGES" ]; then
+#		echo "PACKAGES or DISPATCH_PACKAGES must be set."
+#		exit 1
+#	fi
+fi
+
+echo "          Executing Test Tier           "
+echo ""
+echo "           TEST: $TEST_NAME"
+echo "           TIER: $TIER_NAME"
+echo " NUMBER CLIENTS: $NUMBER_CLIENTS"
+echo "        GATEWAY: $GATEWAY"
+echo "       PACKAGES: $PACKAGES"
+echo "       PROTOCOL: $PROTOCOL"
+echo "      TEST_MODE: $TEST_MODE"
+echo "     ENCRYPTION: $ENCRYPTION"
+echo "    DEBIAN_REPO: $DEBIAN_REPO"
+
+
+# Set up a venv with test-orchestrator installed in it
+T_HOME=$(pwd)
+ARTIFACTORY_URL=trinity.jfrog.io/trinity
+PYPI_REPO=develop # pull from develop if you want the lastest code. Pull from master if you are pinning a release version
+T_ARTIFACTORY_USER=$(/home/ubuntu/virtualenv/credstash/bin/credstash -r us-east-1 get artifactory_user)
+T_ARTIFACTORY_PWD=$(/home/ubuntu/virtualenv/credstash/bin/credstash -r us-east-1 get artifactory_password)
+
+# Create venv and install and configure j-tools
+# Or just activate if it was already created in this environment
+echo "CI Package: Python Virtual Environment Setup"
+rm -rf .venv || true
+#virtualenv -p python3 .venv
+python3 -m venv .venv
+echo "CI Package: Activating Python Virtual Environment"
+source .venv/bin/activate
+echo "CI Package: Installing j-tools"
+INSTALL_URL="https://$T_ARTIFACTORY_USER:$T_ARTIFACTORY_PWD@$ARTIFACTORY_URL/api/pypi/pypi-$PYPI_REPO/simple"
+CASS_DRIVER_NO_EXTENSIONS=1 pip3 --no-cache-dir install -i $INSTALL_URL test-orchestrator
+
+# bring database
+cassandra-migrate -c test_orchestrator/database_scripts/database.yml -H cassandra1.tsdn.io migrate --force
+
+export API_KEY=$(/home/ubuntu/virtualenv/credstash/bin/credstash -r us-east-1 get dev_api_key)
+export ANALYTICS_HOST="localhost"
+export ANALYTICS_USER=$(/home/ubuntu/virtualenv/credstash/bin/credstash -r us-east-1 get dev_analytics_user_testbed)
+export ANALYTICS_PASSWORD=$(/home/ubuntu/virtualenv/credstash/bin/credstash -r us-east-1 get dev_analytics_password_testbed)
+export DATABASE_HOST="cassandra1.tsdn.io,cassandra2.tsdn.io,cassandra3.tsdn.io"
+export DATABASE_KEYSPACE="testtier"
+#export ZONE=$(curl 169.254.169.254/latest/meta-data/placement/availability-zone)
+#export INSTANCE_TYPE=$(curl 169.254.169.254/latest/meta-data/instance-type)
+#export INSTANCE_ID=$(curl 169.254.169.254/latest/meta-data/instance-id)
+export TRIGGER_TEST_ID=""
+
+# purge old registration  messages from queue
+sudo rabbitmqctl purge_queue testorchestrator
+
+if [ -z "$TEST_ID" ]; then
+   # python3 test_orchestrator/trigger.py test_orchestrator.tasks.startTest ${TEST_NAME}.txt ${NUMBER_CLIENTS} ${TIER_NAME} ${GATEWAY} ${PACKAGES} ${PROTOCOL} ${TEST_MODE}
+   test-orchestrator ${TEST_NAME} ${NUMBER_CLIENTS} ${TIER_NAME} ${GATEWAY} ${PROTOCOL} ${TEST_MODE} ${ENCRYPTION} ${PACKAGES} ${DISPATCH_COMMIT_SHA} ${DISPATCH_REF_NAME}
+else
+   # handle new way new with test_id already created
+   test-orchestrator ${TEST_ID}
+fi
+
+TEST_ID=$(<testid)
+RESULT=$(<result)
+ERROR_TEXT=$(<error_text)
+echo "Completed Test $TEST_ID"
+echo " Test Result $RESULT"
+echo " Test Reason $ERROR_TEXT"
+
+# Trigger test report (test/reporter)
+REPORTER_TOKEN=6d9ba33ac37affd30e768dfe5f228e
+REPORTER_PROJECT_ID=385
+curl -X POST -F token=$REPORTER_TOKEN -F ref=master -F "variables[TEST_ID]=$TEST_ID" https://gitlab.trinity.cc/api/v4/projects/$REPORTER_PROJECT_ID/trigger/pipeline
