@@ -1,0 +1,31 @@
+#!/bin/bash
+set -e
+
+VENV_PATH="$CI_PROJECT_DIR/.triggervenv"
+if [ "$VIRTUAL_ENV" == "$VENV_PATH" ]; then
+    # Already using the virtual environment
+    return
+fi
+
+ARTIFACTORY_URL=trinity.jfrog.io/trinity
+PYPI_REPO=develop # test-trigger is installed in development repo, not master. probably should release it.
+
+# Create venv and install and configure j-tools
+# Or just activate if it was already created in this environment
+if [ -n "$PYVENVGUARD" ]; then
+    echo "CI Package: Activating Python Virtual Environment"
+    source $VENV_PATH/bin/activate
+else
+    export T_ARTIFACTORY_USER=hostmaster
+    export T_ARTIFACTORY_PWD=xks3uyjjWerCHKpC
+
+    echo "CI Package: Python Virtual Environment Setup"
+    rm -rf $VENV_PATH || true
+    virtualenv -p python3 $VENV_PATH
+    echo "CI Package: Activating Python Virtual Environment"
+    source $VENV_PATH/bin/activate
+    PYVENVGUARD=1
+
+    echo "CI Package: Installing j-tools"
+    CASS_DRIVER_NO_EXTENSIONS=1 pip3 install -i https://$T_ARTIFACTORY_USER:$T_ARTIFACTORY_PWD@$ARTIFACTORY_URL/api/pypi/pypi-$PYPI_REPO/simple test-trigger
+fi

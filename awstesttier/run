@@ -1,0 +1,82 @@
+#!/bin/bash
+set -e
+
+
+echo ""
+echo ""
+echo "           Test Tier Dispatch           "
+echo ""
+echo " Project: $DISPATCH_PROJECT_NAME"
+echo "     Ref: $DISPATCH_REF_NAME"
+echo "     Ref: $DISPATCH_TAG"
+echo "    Type: $DISPATCH_PROJECT_TYPE"
+echo " Targets: $DISPATCH_TARGETS"
+echo "Packages: $DISPATCH_PACKAGES"
+echo ""
+echo ""
+
+# Apply defaults
+if [ -z "$NUMBER_CLIENTS" ]; then
+	NUMBER_CLIENTS=4
+fi
+if [ -z "$GATEWAY" ]; then
+	GATEWAY=test.v6.tsdn.io
+fi
+if [ -z "$PROTOCOL" ]; then
+	PROTOCOL=tcp
+fi
+if [ -z "$TEST_NAME" ]; then
+	TEST_NAME=test-cell
+fi
+if [ -z "$TIER_NAME" ]; then
+	TIER_NAME=test.v6.tsdn.io
+fi
+
+DEBIAN_REPO=development
+if [ -n "$DISPATCH_TAG" ]; then
+	DEBIAN_REPO=master
+fi
+
+if [ -z "$PACKAGES" ]; then
+	PACKAGES=$DISPATCH_PACKAGES
+	# TODO: can we safely use defaults/latest packages?
+	if [ -z "$PACKAGES" ]; then
+		echo "PACKAGES or DISPATCH_PACKAGES must be set."
+		exit 1
+	fi
+fi
+
+echo "          Executing Test Tier           "
+echo ""
+echo "           TEST: $TEST_NAME"
+echo "           TIER: $TIER_NAME"
+echo " NUMBER CLIENTS: $NUMBER_CLIENTS"
+echo "        GATEWAY: $GATEWAY"
+echo "       PACKAGES: $PACKAGES"
+echo "       PROTOCOL: $PROTOCOL"
+echo "    DEBIAN_REPO: $DEBIAN_REPO"
+
+# Write a dummy profile
+rm -rf profile.json
+touch profile.json
+echo "{" >> profile.json
+echo "    \"T_BROKER_HEARTBEAT\": 10," >> profile.json
+echo "    \"T_BROKER_HOST\": \"analytics.test.v6.tsdn.io\"," >> profile.json
+echo "    \"T_BROKER_PASSWORD\": \"guest\"," >> profile.json
+echo "    \"T_BROKER_USER\": \"guest\"," >> profile.json
+echo "    \"T_BROKER_VHOST\": \"/\"," >> profile.json
+echo "    \"T_DATABASE_HOST\": \"cassandra.test.v6.tsdn.io\"," >> profile.json
+echo "    \"T_DATABASE_KEYSPACE\": \"jumpnettest\"," >> profile.json
+echo "    \"T_PROFILE\": \"io.jsdn.v6.test\"" >> profile.json
+echo "}" >> profile.json
+
+echo "Profile:"
+cat profile.json
+
+# Set up a venv with test-trigger installed in it
+source trigger-venv
+export TRIGGER_TEST_ID=""
+export T_HOME=$(pwd)
+test-trigger test_orchestrator.tasks.startTest ${TEST_NAME}.txt ${NUMBER_CLIENTS} ${TIER_NAME} ${GATEWAY} ${PACKAGES} ${PROTOCOL}
+echo "Completed Test..."
+cat testid
