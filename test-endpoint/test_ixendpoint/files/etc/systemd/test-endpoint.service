@@ -1,0 +1,15 @@
+[Unit]
+Description= Trinity test-endpoint service
+
+[Service]
+Environment=ANALYTICS_USER=guest
+Environment=ANALYTICS_PASSWORD=guest
+Environment=ANALYTICS_HOST=testorchestrator.test.v6.tsdn.io
+Environment=DATABASE_HOST=cassandra.test.v6.tsdn.io
+ExecStart=/trinity/endpoint/test-endpoint/run
+MemoryLimit=1024M
+Restart=always
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target

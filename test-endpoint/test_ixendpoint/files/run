@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+ulimit -m 524288  # KB = 512 MB * 1024 MB/KB
+. /trinity/endpoint/test-endpoint/.virtualenv/bin/activate
+test-endpoint $*
+sleep 30
+
